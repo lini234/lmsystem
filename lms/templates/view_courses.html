@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}View Courses{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>My Courses</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Course Title</th>
+                        <th>Course Code</th>
+                        <th>Instructor</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for enrolled_courses in enrolled_courses %}
+                    <tr>
+                        <td>{{ enrolled_courses.course.title }}</td>
+                        <td>{{ enrolled_courses.course.code }}</td>
+                        <td>{{ enrolled_courses.course.instructor_name }}</td>
+                        <td>{{ enrolled_courses.course.description }}</td>
+                    </tr>
+                 {% endfor %}
+                    <!-- Add more rows for each enrolled course -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

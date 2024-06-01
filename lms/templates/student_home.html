@@ -1,10 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>STUDENT PAGE</title>
-</head>
-<body>
-<h1>I AM A STUDENT</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Student Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Welcome, Student!</h1>
+    <p>This is your dashboard where you can access your courses, assignments, and grades.</p>
+    <a class="btn btn-primary btn-lg" href="/view-courses" role="button">View Courses</a>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Upcoming Deadlines</h2>
+            <ul>
+                <li>Assignment 1 Due: January 15, 2024</li>
+                <li>Quiz 1: January 20, 2024</li>
+                <!-- Add more upcoming deadlines as needed -->
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h2>Announcements</h2>
+            <p>No new announcements at the moment.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

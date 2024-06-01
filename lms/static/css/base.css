@@ -1,0 +1,13 @@
+body {
+    padding-bottom: 60px; /* Adjust according to footer height */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40; /* Dark color for footer background */
+    color: #ffffff; /* Light color for footer text */
+    text-align: center;
+    padding: 20px 0; /* Adjust padding as needed */
+}

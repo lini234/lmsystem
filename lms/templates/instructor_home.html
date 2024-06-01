@@ -1,10 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>INSTRUCTOR PAGE</title>
-</head>
-<body>
-<h1>I AM AN INSTRUCTOR</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Instructor Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1>Welcome, Instructor!</h1>
+    <p>This is your dashboard where you can manage your courses, assignments, and interactions with students.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Course Management</h2>
+            <ul>
+                {% for courses in courses %}
+                <li><a href="{{url_for('views.manage_courses', id=courses.id) }}">{{ courses.title }}</a></li>
+                <!-- List all courses taught by the instructor -->
+                {% endfor %}
+            </ul>
+            <a class="btn btn-primary" href="/create-course" role="button">Create New Course</a>
+        </div>
+        <div class="col-md-6">
+            <h2>Assignment Management</h2>
+            <ul>
+                <li><a href="#">Assignment 1</a></li>
+                <li><a href="#">Assignment 2</a></li>
+                <!-- List all assignments for each course -->
+            </ul>
+            <a class="btn btn-primary" href="#" role="button">Create New Assignment</a>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <h2>Student Interaction</h2>
+            <ul>
+                <li><a href="#">Course 1 Students</a></li>
+                <li><a href="#">Course 2 Students</a></li>
+                <!-- List all courses with options to view students -->
+            </ul>
+            <a class="btn btn-primary" href="#" role="button">Send Announcement</a>
+        </div>
+        <div class="col-md-6">
+            <h2>Analytics and Insights</h2>
+            <p>View analytics and insights on student performance, course engagement, and more.</p>
+            <a class="btn btn-primary" href="#" role="button">View Analytics</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

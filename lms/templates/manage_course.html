@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block title %}Manage Course{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="my-4">Manage Course</h1>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Course Overview</h2>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Course Title: {{ course.title }}</p>
+            <p class="card-text">Instructor: {{ course.instructor_name }}</p>
+            <!-- Add more course details as needed -->
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Course Materials</h2>
+        </div>
+        <div class="card-body">
+            <!-- Add functionality to upload, organize, and manage course materials -->
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Assignments and Assessments</h2>
+        </div>
+        <div class="card-body">
+            <!-- Add functionality to create, manage, and grade assignments and assessments -->
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Student Management</h2>
+        </div>
+        <div class="card-body">
+            <!-- Add functionality to view, add, or remove students from the course -->
+        </div>
+    </div>
+
+    <div class="card mb-4">
+        <div class="card-header">
+            <h2>Communication</h2>
+        </div>
+        <div class="card-body">
+            <!-- Add functionality to send announcements and communicate with students -->
+        </div>
+    </div>
+
+    <a class="btn btn-primary" href="" role="button">Back to Course List</a>
+</div>
+{% endblock %}
